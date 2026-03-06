@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main()
+/*int main()
 {
 	int Cards[52] = { 0, };
 
@@ -25,9 +25,9 @@ int main()
 
 
 	return 0;
-}
+}*/
 
-/*
+
 int main()
 {
 	// 카드 이름 배열 (출력용)
@@ -103,4 +103,3 @@ int main()
 
 	return 0;
 }
-*/
