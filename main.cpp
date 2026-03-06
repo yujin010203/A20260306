@@ -2,8 +2,19 @@
 
 using namespace std;
 
-/*int main()
+int main()
 {
+	//NULL
+	
+
+	// swap
+	int A = 10;
+	int B = 30;
+	int Temp = A;
+	A = B;
+	B = Temp;
+
+	// 똑같은 카드가 나오면 안됨
 	int Cards[52] = { 0, };
 
 	for (int i = 0; i < 52; i++)
@@ -14,10 +25,14 @@ using namespace std;
 	srand((unsigned int)time(nullptr));
 	// shuffle
 	// Random(난수) 두 개 선택해서 교환
-	rand();
 	for (int i = 0; i < 10; i++)
 	{
-		cout << Cards[rand() % 52] << endl;
+		int FirstIndex = rand() % 52;
+		int SecondIndex = rand() % 52;
+		int Temp = Cards[FirstIndex];
+
+		Cards[FirstIndex] = Cards[SecondIndex];
+		Cards[SecondIndex] = Temp;
 	}
 
 
@@ -25,10 +40,10 @@ using namespace std;
 
 
 	return 0;
-}*/
+}
 
 
-int main()
+/*int main()
 {
 	// 카드 이름 배열 (출력용)
 	string CardNames[12] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K" };
@@ -41,19 +56,19 @@ int main()
 
 	srand((unsigned int)time(NULL));
 
-	// 1. 컴퓨터 카드 3장 인덱스 뽑기 및 출력
+	// 컴퓨터 카드 3장
 	cout << "컴퓨터 : ";
 	int ComputerScore = 0;
 	for (int i = 0; i < 3; i++)
 	{
-		int randomIndex = rand() % 12; // 0 ~ 11 사이의 인덱스 생성
+		int randomIndex = rand() % 12;
 		Computer[i] = randomIndex;
-		cout << CardNames[Computer[i]] << " "; // 카드 이름(J, Q, K 포함) 출력
-		ComputerScore += CardValues[Computer[i]]; // 실제 값(10점 등) 합산
+		cout << CardNames[Computer[i]] << " ";
+		ComputerScore += CardValues[Computer[i]];
 	}
 	cout << endl;
 
-	// 2. 플레이어 카드 3장 인덱스 뽑기 및 출력
+	// 플레이어 카드 3장
 	cout << "플레이어 : ";
 	int PlayerScore = 0;
 	for (int j = 0; j < 3; j++)
@@ -102,4 +117,4 @@ int main()
 	cout << endl;
 
 	return 0;
-}
+}*/
